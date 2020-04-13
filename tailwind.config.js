@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     extend: {
-        width: {
+        minWidth: {
             '96': '24rem'
         }
     },
