@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <livewire:styles />
+    <livewire:styles/>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="font-sans bg-gray-900 text-white">
@@ -30,7 +30,7 @@
                 <a href="{{ route('movies.index') }}" class="hover:text-gray-300">Movies</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="#" class="hover:text-gray-300">TV Shows</a>
+                <a href="{{ route('tv.index') }}" class="hover:text-gray-300">TV Shows</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="{{ route('actors.index') }}" class="hover:text-gray-300">Actors</a>
@@ -38,7 +38,7 @@
         </ul>
 
         <div class="flex flex-col md:flex-row items-center">
-            <livewire:search-dropdown />
+            <livewire:search-dropdown/>
 
             <div class="md:ml-4 mt-3 md:mt-0">
                 <a href="#">
@@ -51,7 +51,14 @@
 
 @yield('content')
 
-<livewire:scripts />
+<footer class="border border-t border-gray-800">
+    <div class="container mx-auto text-sm px-4 py-6">
+        Powered by <a href="https://www.themoviedb.org/documentation/api" class="underline hover:text-gray-300">TMDb
+            API</a>
+    </div>
+</footer>
+
+<livewire:scripts/>
 @yield('scripts')
 </body>
 </html>
